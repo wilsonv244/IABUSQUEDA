@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clasificador de imagenes</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+</head>
+<body>
+  
+   
+    <video autoplay="" playsinline muted id="webcam" style="width: 100%;"></video>
+    
+    <a class="btn btn-dark" style="width: 100%;border-radius:0;margin-top: -6px;text-transform:uppercase;" id="enlace" href="#" target="_top">BUSCAR</a>
+
+    
+    <br><br>
+
+    <div class="row align-items-center" style="color:rgb(161, 161, 161)">
+      <div class="col">
+        
+      </div>
+      <div class="col text-center" style="color:rgb(85, 85, 85)">
+
+        <div id="console"></div>
+        
+        <hr>
+
+        <select class="form-control input-lg" id="IdEntrenarObjeto" style="width: 100%;margin-top: 10px;">
+
+          <option value="1">cable</option>
+          <option value="2">monitor</option>
+          <option value="3">data</option>
+          <option value="4">laptop</option>
+          <option value="5">arduino</option>
+          <option value="6">Computadora</option>
+          <option value="7">Sensor de Humedad</option>
+          <option value="8">Control</option>
+
+        </select>
+<!--
+        <div>
+          <button class="btn btn-success" id="clase-a" onClick="addExample(1)">cable</button>
+          <button class="btn btn-success" id="clase-b" onClick="addExample(2)">monitor</button>
+          <button class="btn btn-success" id="clase-c" onClick="addExample(3)">data</button>
+          <button class="btn btn-success" id="clase-d" onClick="addExample(4)">laptop</button>
+          <button class="btn btn-success" id="clase-e" onClick="addExample(5)">arduino</button>
+        </div>
+-->
+        <br>
+        
+        <button class="btn btn-primary" onClick="addExample()" style="width: 100%;margin-top: 10px;">GUARDAR OBJETO DE ENTRENAMIENTO</button>
+        
+        <button class="btn btn-primary" onClick="guardarmodelo()" style="width: 100%;margin-top: 10px;">GUARDAR MODELO</button>
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+      <div class="col text-center" style="color:rgb(161, 161, 161)">
+
+      </div>
+    </div>
+
+  <br><br>
+
+  <script src="index.js?v43"></script>
+
+</body>
+</html>
